@@ -1,0 +1,2522 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Katibeh Naji Holding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/s-2.min.css">
+
+</head>
+
+<body>
+
+    <!-- fixed logo + hamburger, stays visible across the whole page -->
+    <header class="site-header" id="siteHeader">
+        <button class="hamburger" aria-label="باز کردن منو">
+            <span></span><span></span><span></span>
+        </button>
+        <img class="logo" src="assets/images/Katibeh-1.png" alt="کتیبه ناجی">
+    </header>
+    <main>
+        <!-- HERO intro: plays the cube animation, then settles to 2/3 height -->
+        <section class="hero-panel" id="heroPanel">
+            <div class="stage" id="stage">
+                <div class="media">
+                    <img src="assets/images/f-video.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <span class="line line--1" id="line1">ما مسیر رشد برندها را</span>
+                    <span class="line line--2" id="line2">طراحی می‌کنیم</span>
+                </div>
+
+                <!-- Desktop-only hero. Mobile continues to use the original hero above. -->
+                <div class="desktop-hero" id="desktopHero" aria-hidden="true">
+                    <div class="desktop-hero-line1" dir="ltr">
+                        <span class="desktop-hero-word desktop-hero-ma">ما مسیر</span>
+                        <div class="desktop-hero-media" id="desktopHeroMedia">
+                            <video id="desktopHeroVideo" src="assets/videos/Sequence 01_7.mp4"
+                                poster="assets/images/f-video.jpg" autoplay muted playsinline preload="auto"></video>
+                        </div>
+                        <span class="desktop-hero-word desktop-hero-roshd">رشد</span>
+                    </div>
+                    <div class="desktop-hero-line2">برندها را طراحی می‌کنیم</div>
+                </div>
+            </div>
+        </section>
+        <!-- kalge -->
+        <section class="khalge relative w-screen overflow-hidden bg-base py-10">
+            <div class="rows absolute flex col justify-between" id="rows"></div>
+            <div class="vignette absolute inset-0 z-4"></div>
+            <div
+                class="mq-headline absolute inset-0 items-center justify-center text-center pointer-none z-5 righttoleft lg:hidden">
+                <h2 class="mq-line mq-l1">ما مسیر رشد</h2>
+                <h2 class="mq-line mq-l1">برندها را</h2>
+                <h2 class="mq-line mq-l1">طراحی میکنیم ...</h2>
+            </div>
+            <div
+                class="mq-headline absolute inset-0 items-center justify-center text-center pointer-none z-5 righttoleft hidden lg:flex">
+                <h2 class="mq-line mq-l1">
+                    ما مسیر رشد
+                    برندها را
+                </h2>
+                <h2 class="mq-line mq-l1">
+                    طراحی میکنیم ...
+                </h2>
+            </div>
+            <p class="mq-paragraph">
+                اگر دنبال توسعه کسب و کارت هستی، لازمه که مجدداً مسیر توسعه کسب و کار شما آنالیز و بازطراحی بشه. ما
+                بارها این
+                مسیر
+                را با برندهای مختلف تجربه کرده ایم و آماده ایم این تجربیات را با شما به اشتراک بزاریم.
+            </p>
+            <a href="#" class="btn blue-btn text-white">
+                تماس با ما
+            </a>
+        </section>
+        <!-- Image section with centered play control -->
+        <section class="character-video">
+            <picture>
+                <!-- Mobile -->
+                <source media="(max-width: 767px)" srcset="assets/images/01.png">
+                <!-- Desktop -->
+                <img src="assets/images/charcter.jpg" alt="">
+            </picture>
+            <button class="play-btn" aria-label="پخش ویدیو">
+                <img src="assets/images/play.svg" alt="">
+            </button>
+        </section>
+        <!-- <section class="character-video">
+            <img src="assets/images/01.png" alt="">
+            <button class="play-btn" aria-label="پخش ویدیو">
+                <img src="assets/images/play.svg" alt="">
+            </button>
+        </section> -->
+
+        <!-- =========================================================
+       DEPARTMENTS
+  ========================================================= -->
+
+        <section class="height-saver" id="heightSaver"></section>
+        <section class="dept-section righttoleft" id="departments">
+            <div class="dept-content" id="deptContent">
+                <h2 class="dept-heading">
+                    دپارتمان‌ها
+                </h2>
+                <div class="dept-grid">
+
+                    <div class="dept-list" id="deptList">
+
+                        <div class="dept-item active" data-img="assets/images/dep-01.jpg">
+                            <span class="num">01</span>
+                            مسیرهای رشد
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-02.jpg">
+                            <span class="num">02</span>
+                            توسعه برند
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-03.jpg">
+                            <span class="num">03</span>
+                            توسعه بازار و کسب و کار
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-04.jpg">
+                            <span class="num">04</span>
+                            توسعه فروش
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-05.jpg">
+                            <span class="num">05</span>
+                            ارتباطات بازاریابی
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-06.jpg">
+                            <span class="num">06</span>
+                            متد توسعه کتیبه ناجی
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-07.jpg">
+                            <span class="num">07</span>
+                            پروژه‌ها
+                        </div>
+
+                        <div class="dept-item" data-img="assets/images/dep-08.jpg">
+                            <span class="num">08</span>
+                            درخواست جلسه
+                        </div>
+                    </div>
+                    <picture class="w-full md:w-[30%]">
+                        <!-- Mobile -->
+                        <source media="(max-width: 767px)" srcset="assets/images/dep-01.jpg">
+
+                        <!-- Desktop -->
+                        <source media="(min-width: 768px)" srcset="assets/images/s-01.jpg">
+
+                        <!-- Fallback -->
+                        <img id="deptImg" src="assets/images/dep-01.jpg" alt="" class="w-full">
+                    </picture>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- closing simple text section -->
+        <div class="p-4 dep-image-papa">
+            <section class="simple-text-section righttoleft my-8">
+                <h2 class="wholepage-heading en" id="bbfirst">
+                    BUILD BRANDS
+                </h2>
+                <h3 class="smaller-heading en" id="leadfirst">
+                    LEAD MARKETS
+                </h3>
+                <h2 class="wholepage-heading-persian" id="asfirst">
+                    از خلق برند تا رهبری بازار
+                </h2>
+            </section>
+            <section class="image-dep-sec">
+                <div class="relative">
+                    <img src="assets/images/s-01.jpg" alt="" class="rounded-xl">
+                    <div class="image-dep-txt">
+                        <h2>
+                            مسیرهای رشد
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="image-dep-sec">
+                <div class="relative">
+                    <img src="assets/images/s-02.jpg" alt="" class="rounded-xl">
+                    <div class="image-dep-txt">
+                        <h2>
+                            مسیرهای رشد
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="image-dep-sec">
+                <div class="relative">
+                    <img src="assets/images/s-03.jpg" alt="" class="rounded-xl">
+                    <div class="image-dep-txt">
+                        <h2>
+                            مسیرهای رشد
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="image-dep-sec">
+                <div class="relative">
+                    <img src="assets/images/s-04.jpg" alt="" class="rounded-xl">
+                    <div class="image-dep-txt">
+                        <h2>
+                            مسیرهای رشد
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="image-dep-sec">
+
+                <div class="relative">
+                    <div class="image-dep-txt">
+                        <h2>
+                            مسیرهای رشد
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                    <img src="assets/images/s-05.jpg" alt="" class="rounded-xl">
+                </div>
+            </section>
+            <section class="image-dep-sec">
+
+                <div class="relative">
+                    <div class="image-dep-txt">
+                        <h2>
+                            مسیرهای رشد
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                    <img src="assets/images/s-06.jpg" alt="" class="rounded-xl">
+                </div>
+            </section>
+            <section class="image-dep-sec">
+
+                <div class="relative">
+                    <div class="image-dep-txt">
+                        <h2>
+                            بازاریابی یکپارچه
+                        </h2>
+                        <p>
+                            مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن، یک مسیر
+                            روشن
+                        </p>
+                    </div>
+                    <img src="assets/images/s-07.jpg" alt="" class="rounded-xl">
+                </div>
+            </section>
+        </div>
+        <section class="p-4">
+            <h2 class="en-heading en" id="engheading">
+                BUILD BRANS
+            </h2>
+            <h3 class="en-heading en" id="leadsec">
+                LEAD MARKETS
+            </h3>
+            <h2 class="wholepage-heading-persian gray-text" id="assecond">
+                از خلق برند تا رهبری بازار
+            </h2>
+        </section>
+        <section class="p-4">
+            <h2 class="smaller-heading-persian righttoleft text-center" id="projects">
+                پروژه ها
+            </h2>
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-01.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-02.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-03.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-04.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-05.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-06.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-07.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/dep-08.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>
+                                        پروژه ها
+                                    </h2>
+                                    <p>
+                                        مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل
+                                        برسونن، یک مسیر روشن
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="w-[80%] mx-auto">
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/images/dep-01.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-02.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-03.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-04.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-05.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-06.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-07.jpg" /></div>
+                        <div class="swiper-slide"><img src="assets/images/dep-08.jpg" /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-8 p-4 relative ourteam-swiper-parent ourteam-papa">
+            <div class="swiper ourteamSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/s-01.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>تیم ما</h2>
+                                    <p>مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن،
+                                        یک مسیر روشن</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/s-01.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>تیم ما</h2>
+                                    <p>مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن،
+                                        یک مسیر روشن</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section class="image-dep-sec">
+                            <div class="relative">
+                                <img src="assets/images/s-01.jpg" alt="">
+                                <div class="image-dep-txt">
+                                    <h2>تیم ما</h2>
+                                    <p>مسیرهای رشد کتیبه ناجی، طراحی شدن تا شما را از نقطه کنونی به نقطه ایده آل برسونن،
+                                        یک مسیر روشن</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        <div class="my-8">
+            <section class="mt-8 p-4 relative ourteam-swiper-parent">
+                <h2 class="smaller-heading-persian righttoleft text-center" id="eftekhar">
+                    برندهایی که افتخار همکاری با آنها داشته ایم...
+                </h2>
+            </section>
+            <section id="q-gallery-section" class="q-gallery-section">
+                <div id="loading">
+                    <div class="ring"></div>
+                    <p id="loading-text">arranging images…</p>
+                </div>
+            </section>
+            <section class="w-[80%] xxl:w-full mx-auto text-center">
+                <p class="bold-text">
+                    لورم ایپسون متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون
+                </p>
+                <a href="#" class="btn blue-btn text-white">مشاهده</a>
+            </section>
+        </div>
+        <section class="simple-text-section righttoleft my-8 p-8">
+            <h2 class="wholepage-heading en" id="build">BUILD BRANDS</h2>
+            <h3 class="smaller-heading en" id="market">LEAD MARKETS</h3>
+            <h2 class="wholepage-heading-persian" id="bazar">از خلق برند تا رهبری بازار</h2>
+        </section>
+    </main>
+    <footer class="p-10 righttoleft">
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-[70%]">
+                <p class="text-justify">
+                    لورم ایپسون متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون
+                    بلکه روزنامه و مجله
+                </p>
+                <hr>
+                <p class="mt-4">
+                    آدرس: کرج گوهردشت، روبروی نیکامال، ساختمان ایرانیان طبقه دوم، کتیبه ناجی
+                </p>
+            </div>
+            <div class="w-full md:w-[70%] ">
+                <div class="flex justify-end">
+                    <span>Katibehnaji.co</span>
+                    <img src="assets/images/instagram.svg" alt="instagram">
+                </div>
+                <div class="flex justify-end">
+                    <span>Katibehnaji.co</span>
+                    <img src="assets/images/whatsapp.svg" alt="whatsapp">
+                </div>
+                <div class="flex justify-end">
+                    <span>4700 144 0935</span>
+                    <img src="assets/images/phone.svg" alt="phone">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "./assets/js/three.module.js"
+    }
+  }
+  </script>
+
+    <!-- Combined Main Script & Dark Areas Background Script -->
+    <script type="module">
+        import * as THREE from 'three';
+
+        /* ---------- 1. Intro timeline ---------- */
+        const stage = document.getElementById('stage');
+        const line1 = document.getElementById('line1');
+        const header = document.getElementById('siteHeader');
+        const heroPanel = document.getElementById('heroPanel');
+
+        const WORD_STAGGER = 120;
+        const WORD_START_DELAY = 0;
+
+        function splitIntoWords(el) {
+            const text = el.textContent.trim();
+            el.textContent = '';
+            const words = text.split(/\s+/);
+            const wordEls = [];
+            words.forEach((w, i) => {
+                const span = document.createElement('span');
+                span.className = 'word';
+                span.textContent = w;
+                el.appendChild(span);
+                wordEls.push(span);
+                if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+            });
+            return wordEls;
+        }
+
+        function revealWords(words, stagger = WORD_STAGGER, startDelay = WORD_START_DELAY) {
+            words.forEach((word, i) => {
+                setTimeout(() => word.classList.add('show'), startDelay + i * stagger);
+            });
+        }
+
+        function showWordsInstantly(words) {
+            words.forEach(word => word.classList.add('show'));
+        }
+
+        const line1Words = splitIntoWords(line1);
+        const line2Words = splitIntoWords(document.getElementById('line2'));
+
+        const mqHeadlineEl = document.querySelector('.mq-headline');
+        const mqLineWords = Array.from(mqHeadlineEl.querySelectorAll('.mq-line')).map(el => splitIntoWords(el));
+
+        const mqObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                mqLineWords.forEach((words, i) => {
+                    revealWords(words, WORD_STAGGER, i * (WORD_STAGGER * words.length + 150));
+                });
+                mqObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.05 });
+
+        mqObserver.observe(mqHeadlineEl);
+
+        /* ---------- Desktop "slide in" reveal for p-4.dep-image-papa cards ----------
+           On mobile these sections are simply visible (no opacity/transform rule
+           applies below 1024px), so this observer is harmless there — it only
+           produces a visible effect once the >=1024px CSS in stherteen.css kicks in. */
+        const depImagePapaCards = document.querySelectorAll('.dep-image-papa .image-dep-sec');
+        if (depImagePapaCards.length) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+            depImagePapaCards.forEach((card) => revealObserver.observe(card));
+        }
+
+        function setSplitDistance() {
+            const h = line1.getBoundingClientRect().height;
+            stage.style.setProperty('--split-y', (h * 3.9 + 20) + 'px');
+        }
+        setSplitDistance();
+        window.addEventListener('resize', setSplitDistance);
+
+        let heroSettled = false;
+
+        function fillCubeToScreen() {
+            const media = stage.querySelector('.media');
+            media.style.zIndex = '2';
+            const headline = stage.querySelector('.headline');
+            headline.style.zIndex = '1';
+            media.style.transition = 'none';
+
+            const startRect = media.getBoundingClientRect();
+            const stageRect = stage.getBoundingClientRect();
+
+            const startWidth = startRect.width;
+            const startHeight = startRect.height;
+            const targetWidth = stageRect.width;
+            const targetHeight = stageRect.height;
+
+            const duration = 1100;
+            const startTime = performance.now();
+
+            function animateCube(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+
+                const currentWidth = startWidth + (targetWidth - startWidth) * eased;
+                const currentHeight = startHeight + (targetHeight - startHeight) * eased;
+
+                media.style.width = `${currentWidth}px`;
+                media.style.height = `${currentHeight}px`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateCube);
+                } else {
+                    media.style.width = `${targetWidth}px`;
+                    media.style.height = `${targetHeight}px`;
+                }
+            }
+            requestAnimationFrame(animateCube);
+        }
+
+        let introStarted = false;
+        function startIntro() {
+            if (introStarted) return;
+            introStarted = true;
+
+            /* Desktop has its own completely separate hero animation below.
+               The original animation is intentionally used only on mobile/tablet. */
+            if (window.matchMedia('(min-width: 1024px)').matches) return;
+
+            requestAnimationFrame(() => {
+                setTimeout(() => revealWords(line1Words), 250);
+                setTimeout(() => revealWords(line2Words), 700);
+
+                setTimeout(() => {
+                    stage.classList.add('cube');
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            stage.classList.add('split', 'grown');
+                        });
+                    });
+                }, 1700);
+
+                setTimeout(() => {
+                    fillCubeToScreen();
+                }, 3000);
+
+                setTimeout(() => {
+                    stage.classList.add('shrink');
+                    heroPanel.classList.add('settled');
+                    header.classList.add('visible');
+                    heroSettled = true;
+                }, 4900);
+            });
+        }
+        startIntro();
+        /* ================================================================
+      DESKTOP HERO — COMPLETELY JS CONTROLLED
+      ---------------------------------------------------------------
+/* ================================================================
+   DESKTOP HERO
+   Completely independent from the original/mobile .headline
+   ================================================================ */
+
+        (function initDesktopHero() {
+
+            if (!window.matchMedia('(min-width: 1024px)').matches) {
+                return;
+            }
+
+            const desktopHero = document.getElementById('desktopHero');
+
+            if (!desktopHero) return;
+
+            const desktopHeroLine1 =
+                desktopHero.querySelector('.desktop-hero-line1');
+
+            const desktopHeroLine2 =
+                desktopHero.querySelector('.desktop-hero-line2');
+
+            const desktopHeroMedia =
+                document.getElementById('desktopHeroMedia');
+
+            const desktopHeroImage =
+                desktopHeroMedia?.querySelector('img');
+
+            const ma =
+                desktopHero.querySelector('.desktop-hero-ma');
+
+            const roshd =
+                desktopHero.querySelector('.desktop-hero-roshd');
+
+            if (
+                !desktopHeroLine1 ||
+                !desktopHeroLine2 ||
+                !desktopHeroMedia ||
+                !desktopHeroImage ||
+                !ma ||
+                !roshd
+            ) {
+                return;
+            }
+
+
+            /* ============================================================
+               IMPORTANT:
+               Remove the image from desktopHeroLine1.
+        
+               desktopHeroLine1 is ONLY for the two text elements.
+               The image becomes a completely independent layer.
+               ============================================================ */
+
+            desktopHero.appendChild(desktopHeroMedia);
+
+
+            /* ============================================================
+               DESKTOP HERO
+               ============================================================ */
+
+            Object.assign(desktopHero.style, {
+                position: 'relative',
+                overflow: 'hidden',
+                width: '100%',
+                height: '100vh',
+                background: '#000000'
+            });
+
+
+            /* ============================================================
+               LINE 1
+               
+               This contains ONLY:
+        
+                    ما مسیر
+                    رشد
+        
+               It stays vertically centered.
+               ============================================================ */
+
+            Object.assign(desktopHeroLine1.style, {
+                position: 'absolute',
+                left: '0',
+                top: '50%',
+                width: '100%',
+                height: 'auto',
+
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+
+                direction: 'rtl',
+
+                transform: 'translateY(-50%)',
+
+                margin: '0',
+                padding: '0',
+
+                zIndex: '20'
+            });
+
+
+            /* ============================================================
+               TEXT
+               ============================================================ */
+
+            Object.assign(ma.style, {
+                position: 'relative',
+                flex: '0 0 auto',
+                whiteSpace: 'nowrap',
+                margin: '0'
+            });
+
+            Object.assign(roshd.style, {
+                position: 'relative',
+                flex: '0 0 auto',
+                whiteSpace: 'nowrap',
+                margin: '0'
+            });
+
+
+            /* ============================================================
+               LINE 2
+        
+               IMPORTANT:
+               It does NOT participate in line1 layout.
+               It stays fixed while line1 splits.
+               ============================================================ */
+
+            Object.assign(desktopHeroLine2.style, {
+                position: 'absolute',
+                left: '50%',
+                width: '100%',
+                transform: 'translateX(-50%)',
+
+                textAlign: 'center',
+
+                margin: '0',
+
+                zIndex: '21'
+            });
+
+
+            /* ============================================================
+               MEDIA
+        
+               The image is now a child of desktopHero,
+               NOT desktopHeroLine1.
+        
+               Therefore top/left/width/height are relative
+               to the entire black hero.
+               ============================================================ */
+
+            Object.assign(desktopHeroMedia.style, {
+                position: 'absolute',
+
+                left: '50%',
+                top: '50%',
+
+                width: '0px',
+                height: '0px',
+
+                transform: 'translate(-50%, -50%)',
+
+                margin: '0',
+
+                overflow: 'hidden',
+
+                zIndex: '10'
+            });
+
+
+            /* ============================================================
+               IMAGE
+               ============================================================ */
+
+            Object.assign(desktopHeroImage.style, {
+                display: 'block',
+
+                width: '100%',
+                height: '100%',
+
+                objectFit: 'cover',
+
+                margin: '0'
+            });
+
+
+            /* ============================================================
+               POSITION LINE 2
+               
+               Put line2 below line1 without moving line1.
+               ============================================================ */
+
+            function positionLine2() {
+
+                const heroRect =
+                    desktopHero.getBoundingClientRect();
+
+                const line1Rect =
+                    desktopHeroLine1.getBoundingClientRect();
+
+                const line2Height =
+                    desktopHeroLine2.getBoundingClientRect().height;
+
+                const gap = 25;
+
+                const line2Top =
+                    line1Rect.bottom -
+                    heroRect.top +
+                    gap;
+
+                desktopHeroLine2.style.top =
+                    `${line2Top}px`;
+            }
+
+
+            /* ============================================================
+               INITIAL STATE
+        
+               We want:
+        
+                         ما مسیر رشد
+        
+                      برندها را طراحی می‌کنیم
+        
+               centered in black.
+               ============================================================ */
+
+            function setInitialState() {
+
+                desktopHeroLine1.style.justifyContent = 'center';
+
+                desktopHeroMedia.style.width = '0px';
+                desktopHeroMedia.style.height = '0px';
+
+                desktopHeroMedia.style.left = '50%';
+                desktopHeroMedia.style.top = '50%';
+
+                desktopHeroMedia.style.transform =
+                    'translate(-50%, -50%)';
+
+                desktopHeroMedia.style.zIndex = '10';
+
+                desktopHeroLine1.style.zIndex = '20';
+                desktopHeroLine2.style.zIndex = '21';
+
+                positionLine2();
+            }
+
+
+            /* ============================================================
+               SPLIT TEXT
+               
+               "رشد" goes to the LEFT.
+               "ما مسیر" goes to the RIGHT.
+        
+               The line itself does NOT move vertically.
+               ============================================================ */
+
+            function splitText() {
+
+                desktopHeroLine1.style.justifyContent =
+                    'space-between';
+
+                desktopHeroLine1.style.direction =
+                    'rtl';
+
+                /*
+                 * Keep both text elements at the edges.
+                 * Image is completely independent of this flex layout.
+                 */
+
+                desktopHeroMedia.style.left = '50%';
+                desktopHeroMedia.style.top = '50%';
+            }
+
+
+            /* ============================================================
+               FIND THE GAP BETWEEN THE TWO TEXT ELEMENTS
+               ============================================================ */
+
+            function getTextGap() {
+
+                const heroRect =
+                    desktopHero.getBoundingClientRect();
+
+                const maRect =
+                    ma.getBoundingClientRect();
+
+                const roshdRect =
+                    roshd.getBoundingClientRect();
+
+                /*
+                 * Because direction is RTL:
+        
+                     roshd = left
+                     ma    = right
+                 */
+
+                const leftEdge =
+                    roshdRect.right;
+
+                const rightEdge =
+                    maRect.left;
+
+                const gapLeft =
+                    leftEdge - heroRect.left;
+
+                const gapRight =
+                    rightEdge - heroRect.left;
+
+                return {
+                    left: gapLeft,
+                    right: gapRight,
+                    width: gapRight - gapLeft,
+
+                    center:
+                        (gapLeft + gapRight) / 2
+                };
+            }
+
+
+            /* ============================================================
+               PUT IMAGE IN THE CENTER OF THE GAP
+               ============================================================ */
+
+            function showImageInGap() {
+
+                const heroRect =
+                    desktopHero.getBoundingClientRect();
+
+                const gap =
+                    getTextGap();
+
+                const line1Rect =
+                    desktopHeroLine1.getBoundingClientRect();
+
+                const imageWidth =
+                    Math.max(120, gap.width);
+
+                const imageHeight =
+                    Math.max(100, line1Rect.height * 1.25);
+
+                const centerX =
+                    gap.center;
+
+                const centerY =
+                    line1Rect.top -
+                    heroRect.top +
+                    line1Rect.height / 2;
+
+                desktopHeroMedia.style.left =
+                    `${centerX}px`;
+
+                desktopHeroMedia.style.top =
+                    `${centerY}px`;
+
+                desktopHeroMedia.style.width =
+                    `${imageWidth}px`;
+
+                desktopHeroMedia.style.height =
+                    `${imageHeight}px`;
+
+                desktopHeroMedia.style.transform =
+                    'translate(-50%, -50%)';
+
+                desktopHeroMedia.style.zIndex = '10';
+
+                /*
+                 * Text remains ABOVE the image.
+                 */
+
+                desktopHeroLine1.style.zIndex = '20';
+                desktopHeroLine2.style.zIndex = '21';
+            }
+
+
+            /* ============================================================
+               FULLSCREEN IMAGE
+               
+               Now the image covers the ENTIRE black hero.
+        
+               It is NOT affected by line1 top:50%.
+               ============================================================ */
+
+            function expandImageFullscreen() {
+
+                const heroRect =
+                    desktopHero.getBoundingClientRect();
+
+                desktopHeroMedia.style.transition =
+                    'left 1100ms cubic-bezier(0.22, 1, 0.36, 1), ' +
+                    'top 1100ms cubic-bezier(0.22, 1, 0.36, 1), ' +
+                    'width 1100ms cubic-bezier(0.22, 1, 0.36, 1), ' +
+                    'height 1100ms cubic-bezier(0.22, 1, 0.36, 1)';
+
+                desktopHeroMedia.style.left =
+                    `${heroRect.width / 2}px`;
+
+                desktopHeroMedia.style.top =
+                    `${heroRect.height / 2}px`;
+
+                desktopHeroMedia.style.width =
+                    `${heroRect.width}px`;
+
+                desktopHeroMedia.style.height =
+                    `${heroRect.height}px`;
+
+                desktopHeroMedia.style.transform =
+                    'translate(-50%, -50%)';
+
+
+                /*
+                 * ONLY NOW does image go above the text.
+                 */
+
+                setTimeout(() => {
+
+                    desktopHeroMedia.style.zIndex = '100';
+
+                }, 1100);
+            }
+
+
+            /* ============================================================
+               START
+               ============================================================ */
+
+            setInitialState();
+
+
+            /*
+             * Wait for browser to finish layout.
+             */
+
+            requestAnimationFrame(() => {
+
+                positionLine2();
+
+
+                /*
+                 * Initial phrase stays visible for a moment.
+                 */
+
+                setTimeout(() => {
+
+                    splitText();
+
+                }, 1000);
+
+
+                /*
+                 * After text reaches the edges,
+                 * put image exactly inside the gap.
+                 */
+
+                setTimeout(() => {
+
+                    showImageInGap();
+
+                }, 1700);
+
+
+                /*
+                 * Small pause after image appears.
+                 */
+
+                setTimeout(() => {
+
+                    expandImageFullscreen();
+
+                }, 2800);
+
+            });
+
+
+            /* ============================================================
+               RESIZE
+               ============================================================ */
+
+            window.addEventListener('resize', () => {
+
+                if (
+                    desktopHeroMedia.style.zIndex !== '100'
+                ) {
+                    setInitialState();
+                }
+
+            });
+
+        })();
+        /* ---------- Marquee Rows Config ---------- */
+        const enPhrases = ["BUILD BRANDS . LEAD MARKETS", "KATIBEH NAJI HOLDING"];
+        const faPhrase = "از خلق برند تا رهبری بازار";
+
+        const rowConfigs = [
+            { lang: 'en', size: 26, angle: 0, dir: 'ltr', dur: 28 },
+            { lang: 'fa', size: 24, angle: -6, dir: 'rtl', dur: 22 },
+            { lang: 'en', size: 36, angle: 4, dir: 'ltr', dur: 34 },
+            { lang: 'fa', size: 18, angle: 0, dir: 'rtl', dur: 17 },
+            { lang: 'en', size: 20, angle: -10, dir: 'ltr', dur: 24 },
+            { lang: 'fa', size: 30, angle: 8, dir: 'rtl', dur: 29 },
+            { lang: 'en', size: 16, angle: 0, dir: 'ltr', dur: 18 },
+            { lang: 'fa', size: 22, angle: -4, dir: 'rtl', dur: 22 },
+            { lang: 'en', size: 32, angle: 6, dir: 'ltr', dur: 31 },
+            { lang: 'fa', size: 19, angle: 0, dir: 'rtl', dur: 19 },
+            { lang: 'en', size: 24, angle: -8, dir: 'ltr', dur: 26 },
+            { lang: 'fa', size: 27, angle: 10, dir: 'rtl', dur: 27 },
+            { lang: 'en', size: 18, angle: 0, dir: 'ltr', dur: 17 },
+            { lang: 'fa', size: 36, angle: -6, dir: 'rtl', dur: 35 },
+            { lang: 'en', size: 22, angle: 5, dir: 'ltr', dur: 21 },
+            { lang: 'fa', size: 20, angle: -3, dir: 'rtl', dur: 20 },
+            { lang: 'en', size: 28, angle: 7, dir: 'ltr', dur: 27 },
+            { lang: 'fa', size: 16, angle: 0, dir: 'rtl', dur: 16 },
+            { lang: 'en', size: 34, angle: -5, dir: 'ltr', dur: 33 },
+            { lang: 'fa', size: 25, angle: 9, dir: 'rtl', dur: 25 },
+            { lang: 'en', size: 19, angle: 0, dir: 'ltr', dur: 19 },
+            { lang: 'fa', size: 31, angle: -7, dir: 'rtl', dur: 30 },
+            { lang: 'en', size: 23, angle: 3, dir: 'ltr', dur: 23 },
+            { lang: 'fa', size: 17, angle: 0, dir: 'rtl', dur: 17 },
+            { lang: 'en', size: 29, angle: -9, dir: 'ltr', dur: 28 },
+            { lang: 'fa', size: 21, angle: 6, dir: 'rtl', dur: 21 },
+            { lang: 'en', size: 38, angle: 0, dir: 'ltr', dur: 36 },
+            { lang: 'fa', size: 15, angle: -4, dir: 'rtl', dur: 15 },
+            { lang: 'en', size: 21, angle: 8, dir: 'ltr', dur: 20 },
+            { lang: 'fa', size: 33, angle: 0, dir: 'rtl', dur: 32 },
+            { lang: 'en', size: 17, angle: -6, dir: 'ltr', dur: 16 },
+            { lang: 'fa', size: 26, angle: 5, dir: 'rtl', dur: 26 },
+        ];
+
+        const rowsEl = document.getElementById('rows');
+
+        function buildTrackContent(lang) {
+            let items = [];
+            if (lang === 'en') {
+                for (let i = 0; i < 22; i++) { items.push(enPhrases[i % enPhrases.length]); }
+            } else {
+                for (let i = 0; i < 22; i++) { items.push(faPhrase); }
+            }
+            return items.map(t => `<span class="inline-block">${t}</span>`).join('') + " . ";
+        }
+
+        if (window.innerWidth <= 320) {
+            rowConfigs.forEach(r => { r.size *= 2.9; r.dur *= 5.5; r.angle = Math.max(-4, Math.min(4, r.angle)); });
+
+
+        } else if (window.innerWidth < 375) {
+            rowConfigs.forEach(r => { r.size *= 2.2; r.dur *= 2.5; r.angle = Math.max(-4, Math.min(4, r.angle)); });
+        } else if (window.innerWidth < 425) {
+            rowConfigs.forEach(r => { r.size *= 3.2; r.dur *= 8.5; r.angle = Math.max(-4, Math.min(4, r.angle)); });
+        } else if (window.innerWidth < 768) {
+            rowConfigs.forEach(r => { r.size *= 4.2; r.dur *= 4.5; r.angle = Math.max(-4, Math.min(4, r.angle)); });
+        } else {
+            rowConfigs.forEach(r => { r.size *= 8.2; r.dur *= 8.5; r.angle = Math.max(-4, Math.min(4, r.angle)); });
+        }
+
+        rowConfigs.forEach((cfg) => {
+            const row = document.createElement('div');
+            row.className = `marquee-row flex items-center nowrap line-tight ${cfg.dir}`;
+            row.style.transform = `rotate(${cfg.angle}deg)`;
+
+            const track = document.createElement('div');
+            track.className = `track flex nowrap items-center will-change-transform ${cfg.lang === 'en' ? 'en' : 'fa'}`;
+            track.style.fontSize = cfg.size + 'px';
+            track.style.animationDuration = cfg.dur + 's';
+
+            const content = buildTrackContent(cfg.lang);
+            track.innerHTML = content + content;
+
+            row.appendChild(track);
+            rowsEl.appendChild(row);
+        });
+
+        /* ---------- Departments Pin & Scroll Logic ---------- */
+        const departments = document.getElementById("departments");
+        const heightSaver = document.getElementById("heightSaver");
+        const deptItems = document.querySelectorAll(".dept-list .dept-item");
+        const deptImg = document.getElementById("deptImg");
+
+        let activeIndex = 0;
+        let isDepartmentActive = false;
+        let wheelLocked = false;
+        const WHEEL_DELAY = 600;
+
+        function setActiveDepartment(index) {
+            if (index < 0 || index >= deptItems.length) return;
+            deptItems.forEach(item => item.classList.remove("active"));
+            deptItems[index].classList.add("active");
+            if (deptImg) {
+                const imageNumber = String(index + 1).padStart(2, "0");
+                deptImg.src = `assets/images/dep-${imageNumber}.jpg`;
+            }
+            activeIndex = index;
+        }
+
+        function enterDepartments() {
+            isDepartmentActive = true;
+            departments.classList.add("visible");
+            heightSaver.style.height = `${departments.offsetHeight}px`;
+            setActiveDepartment(activeIndex);
+        }
+
+        function leaveDepartments(direction) {
+            isDepartmentActive = false;
+            departments.classList.remove("visible");
+            heightSaver.style.height = "0px";
+            window.scrollBy(0, direction === "down" ? 2 : -2);
+        }
+
+        function handleWheel(e) {
+            if (!isDepartmentActive) return;
+            e.preventDefault();
+            if (wheelLocked) return;
+
+            if (e.deltaY > 0) {
+                if (activeIndex < deptItems.length - 1) {
+                    wheelLocked = true;
+                    setActiveDepartment(activeIndex + 1);
+                    setTimeout(() => { wheelLocked = false; }, WHEEL_DELAY);
+                } else {
+                    leaveDepartments("down");
+                }
+            } else if (e.deltaY < 0) {
+                if (activeIndex > 0) {
+                    wheelLocked = true;
+                    setActiveDepartment(activeIndex - 1);
+                    setTimeout(() => { wheelLocked = false; }, WHEEL_DELAY);
+                } else {
+                    leaveDepartments("up");
+                }
+            }
+        }
+
+        let touchStartY = 0;
+        window.addEventListener("touchstart", (e) => {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener("touchmove", (e) => {
+            if (!isDepartmentActive) return;
+            e.preventDefault();
+            if (wheelLocked) return;
+
+            const touchY = e.touches[0].clientY;
+            const deltaY = touchStartY - touchY;
+            if (Math.abs(deltaY) < 30) return;
+            touchStartY = touchY;
+
+            if (deltaY > 0) {
+                if (activeIndex < deptItems.length - 1) {
+                    wheelLocked = true;
+                    setActiveDepartment(activeIndex + 1);
+                    setTimeout(() => { wheelLocked = false; }, WHEEL_DELAY);
+                } else {
+                    leaveDepartments("down");
+                }
+            } else {
+                if (activeIndex > 0) {
+                    wheelLocked = true;
+                    setActiveDepartment(activeIndex - 1);
+                    setTimeout(() => { wheelLocked = false; }, WHEEL_DELAY);
+                } else {
+                    leaveDepartments("up");
+                }
+            }
+        }, { passive: false });
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting && !isDepartmentActive) {
+                enterDepartments();
+            }
+        }, { threshold: 0.8 });
+
+        observer.observe(departments);
+        window.addEventListener("wheel", handleWheel, { passive: false });
+        setActiveDepartment(0);
+
+        /* ---------- Swipers Setup ---------- */
+        var swiper = new Swiper('.mySwiper', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            // autoplay: { delay: 3500, disableOnInteraction: false },
+        });
+        var swiper2 = new Swiper('.mySwiper2', {
+            spaceBetween: 10,
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.mySwiper2 .swiper-pagination' },
+            thumbs: { swiper: swiper },
+            // autoplay: { delay: 3500, disableOnInteraction: false },
+        });
+        var swiperTeam = new Swiper('.ourteamSwiper', {
+            loop: true,
+            // autoplay: { delay: 2500, disableOnInteraction: false },
+            pagination: { el: '.ourteam-papa .swiper-pagination' },
+        });
+
+        /* ---------- Text Typing Effect ---------- */
+        function startDeptTyping() {
+            const deptSection = document.querySelector('.dept-section');
+            const deptLists = document.querySelectorAll('.dept-list');
+            if (!deptSection || !deptLists.length) return;
+            let started = false;
+
+            const obs = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !started) {
+                    started = true;
+                    typeList(0);
+                }
+            }, { threshold: 0.2 });
+            obs.observe(deptSection);
+
+            function typeList(listIndex) {
+                if (listIndex >= deptLists.length) return;
+                const list = deptLists[listIndex];
+                const items = list.querySelectorAll('.dept-item');
+                typeItem(items, 0, listIndex);
+            }
+
+            function typeItem(items, itemIndex, listIndex) {
+                if (itemIndex >= items.length) {
+                    setTimeout(() => { typeList(listIndex + 1); }, 150);
+                    return;
+                }
+                const item = items[itemIndex];
+                const textNode = Array.from(item.childNodes).find(node =>
+                    node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0
+                );
+                if (!textNode) {
+                    typeItem(items, itemIndex + 1, listIndex);
+                    return;
+                }
+                const originalText = textNode.textContent.trim();
+                textNode.textContent = '';
+                item.style.visibility = 'visible';
+                let charIndex = 0;
+
+                function type() {
+                    if (charIndex < originalText.length) {
+                        textNode.textContent += originalText[charIndex];
+                        charIndex++;
+                        setTimeout(type, 50);
+                    } else {
+                        setTimeout(() => { typeItem(items, itemIndex + 1, listIndex); }, 150);
+                    }
+                }
+                type();
+            }
+        }
+        startDeptTyping();
+
+        function typeWhenVisible(selector, speed = 80) {
+            const elements = document.querySelectorAll(selector);
+            if (!elements.length) return;
+            elements.forEach(element => {
+                const originalText = element.textContent.trim();
+                element.textContent = '';
+                let started = false;
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !started) {
+                            started = true;
+                            let charIndex = 0;
+                            function type() {
+                                if (charIndex < originalText.length) {
+                                    element.textContent += originalText.charAt(charIndex);
+                                    charIndex++;
+                                    setTimeout(type, speed);
+                                }
+                            }
+                            type();
+                            obs.unobserve(element);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                obs.observe(element);
+            });
+        }
+
+        typeWhenVisible('#projects');
+        typeWhenVisible('#eftekhar');
+        typeWhenVisible('#bbfirst');
+        typeWhenVisible('#leadfirst');
+        typeWhenVisible('#asfirst');
+        typeWhenVisible('#engheading');
+        typeWhenVisible('#leadsec');
+        typeWhenVisible('#assecond');
+        typeWhenVisible('#build');
+        typeWhenVisible('#market');
+        typeWhenVisible('#bazar');
+
+        /* ---------- Three.js Gallery Section ---------- */
+        /* ---------- Three.js Gallery Section ---------- */
+        /* ---------- Three.js Gallery Section ---------- */
+        /* ---------- Three.js Gallery Section ---------- */
+        (function () {
+            const container = document.getElementById('q-gallery-section');
+            const IMAGE_COUNT = 36;
+            const PATH = i => `assets/images/q-${String(i).padStart(2, '0')}.png`;
+            const CENTER_INDEX = 0;
+            const ORBIT_COUNT = 10;
+            let PLANE_SIZE = 1.7;
+            let CENTER_SIZE = 3.2;
+            const OCCLUSION_DOT = -0.8;
+            let ORBIT_RADIUS = 3.2;
+
+            if (window.innerWidth <= 320) {
+                ORBIT_RADIUS = 3.3; PLANE_SIZE = 3.2; CENTER_SIZE = 3.2;
+                console.log("in 320");
+            } else if (window.innerWidth >= 375 && window.innerWidth < 425) {
+                console.log("in window.innerWidth >= 375 && window.innerWidth < 425");
+                ORBIT_RADIUS = 3; PLANE_SIZE = 2; CENTER_SIZE = 2.8;
+            } else if (window.innerWidth >= 425 && window.innerWidth < 768) {
+                console.log("window.innerWidth >= 425 && window.innerWidth < 768");
+                ORBIT_RADIUS = 3; PLANE_SIZE = 2; CENTER_SIZE = 2.8;
+            } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+                console.log("window.innerWidth >= 768 && window.innerWidth < 1024");
+                ORBIT_RADIUS = 3; PLANE_SIZE = 2; CENTER_SIZE = 2.8;
+            } else if (window.innerWidth >= 1024 && window.innerWidth < 1440) {
+                console.log("wwindow.innerWidth >= 1024 && window.innerWidth < 1440");
+                ORBIT_RADIUS = 3; PLANE_SIZE = 2; CENTER_SIZE = 2.8;
+            } else if (window.innerWidth >= 1440) {
+                console.log("window.innerWidth >= 1440");
+                ORBIT_RADIUS = 5; PLANE_SIZE = 2.8; CENTER_SIZE = 6.8;
+            }
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(45, container.clientWidth / (container.clientHeight || 500), 0.1, 200);
+            camera.position.set(0, 2.4, 16);
+
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+
+            const loadingText = document.getElementById('loading-text');
+
+            function getResponsiveHeight(width) {
+                const fov = THREE.MathUtils.degToRad(camera.fov);
+                const requiredWorldHeight = (ORBIT_RADIUS + PLANE_SIZE) * 2;
+                const visibleHeightAtCamera = 2 * camera.position.z * Math.tan(fov / 2);
+                const aspect = width / visibleHeightAtCamera;
+                return Math.max(400, requiredWorldHeight / aspect);
+            }
+
+            function updateGalleryHeight() {
+                const w = container.clientWidth || window.innerWidth;
+                const h = getResponsiveHeight(w);
+                container.style.height = `${h}px`;
+                camera.aspect = w / h;
+                camera.updateProjectionMatrix();
+                renderer.setSize(w, h, false);
+            }
+
+            // Initialize container height immediately via JS
+            updateGalleryHeight();
+            container.appendChild(renderer.domElement);
+
+            function handleResize() {
+                updateGalleryHeight();
+            }
+            window.addEventListener('resize', handleResize);
+            if ('ResizeObserver' in window) {
+                new ResizeObserver(handleResize).observe(container);
+            }
+
+            const loader = new THREE.TextureLoader();
+            const placeholderTex = (label) => {
+                const c = document.createElement('canvas'); c.width = c.height = 256;
+                const ctx = c.getContext('2d');
+                const g = ctx.createLinearGradient(0, 0, 256, 256);
+                g.addColorStop(0, '#1b2233'); g.addColorStop(1, '#0a0f1a');
+                ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 256);
+                ctx.strokeStyle = 'rgba(212,175,106,0.5)'; ctx.lineWidth = 3;
+                ctx.strokeRect(8, 8, 240, 240);
+                ctx.fillStyle = '#d4af6a'; ctx.font = '28px Georgia'; ctx.textAlign = 'center';
+                ctx.fillText(label, 128, 138);
+                return new THREE.CanvasTexture(c);
+            };
+
+            function loadTexture(i) {
+                return new Promise((resolve) => {
+                    loader.load(PATH(i), (tex) => { if ('colorSpace' in tex) tex.colorSpace = THREE.SRGBColorSpace; resolve(tex); }, undefined, () => resolve(placeholderTex(`q-${String(i).padStart(2, '0')}`)));
+                });
+            }
+
+            function applyAspect(mesh, tex, baseSize) {
+                const img = tex.image;
+                const ratio = (img && img.width) ? img.width / img.height : 1;
+                const w = ratio >= 1 ? baseSize : baseSize * ratio;
+                const h = ratio >= 1 ? baseSize / ratio : baseSize;
+                mesh.scale.set(w, h, 1);
+            }
+
+            function makeUnitPlane(tex, baseSize) {
+                const geo = new THREE.PlaneGeometry(1, 1);
+                const mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, side: THREE.DoubleSide, opacity: 1 });
+                const mesh = new THREE.Mesh(geo, mat);
+                applyAspect(mesh, tex, baseSize);
+                return mesh;
+            }
+
+            let orbiters = [];
+            let textures = [];
+            let poolIndices = [];
+            let centerMesh = null;
+            let ring = null;
+
+            function pickRandomIndex(excludeIndices) {
+                const available = poolIndices.filter(i => !excludeIndices.includes(i));
+                const pool = available.length ? available : poolIndices;
+                return pool[Math.floor(Math.random() * pool.length)];
+            }
+
+            function buildRing(radius) {
+                const geo = new THREE.RingGeometry(radius - 0.01, radius + 0.01, 96);
+                const mat = new THREE.MeshBasicMaterial({ color: 0xd4af6a, transparent: true, opacity: 0.15, side: THREE.DoubleSide });
+                return new THREE.Mesh(geo, mat);
+            }
+
+            (async function build() {
+                const indices = Array.from({ length: IMAGE_COUNT }, (_, i) => i);
+                textures = new Array(IMAGE_COUNT);
+                for (let n = 0; n < indices.length; n++) {
+                    textures[indices[n]] = await loadTexture(indices[n]);
+                    if (loadingText) loadingText.textContent = `arranging images… ${n + 1}/${IMAGE_COUNT}`;
+                }
+                poolIndices = indices.filter(i => i !== CENTER_INDEX);
+
+                centerMesh = makeUnitPlane(textures[CENTER_INDEX], CENTER_SIZE);
+                centerMesh.position.set(0, 0, 0);
+                scene.add(centerMesh);
+
+                ring = buildRing(ORBIT_RADIUS);
+                scene.add(ring);
+
+                const used = [];
+                for (let n = 0; n < ORBIT_COUNT; n++) {
+                    const startIndex = pickRandomIndex(used);
+                    used.push(startIndex);
+
+                    const pivot = new THREE.Group();
+                    pivot.rotation.set(Math.random() * Math.PI * 2, Math.random() * Math.PI * 2, Math.random() * Math.PI * 2);
+                    scene.add(pivot);
+
+                    const mesh = makeUnitPlane(textures[startIndex], PLANE_SIZE);
+                    mesh.position.set(ORBIT_RADIUS, 0, 0);
+                    pivot.add(mesh);
+
+                    const speed = (Math.random() * 0.5 + 0.25) * (Math.random() < 0.5 ? -1 : 1);
+                    orbiters.push({ pivot, mesh, speed, index: startIndex, wasOccluded: false });
+                }
+
+                const loadEl = document.getElementById('loading');
+                if (loadEl) {
+                    loadEl.style.opacity = '0';
+                    setTimeout(() => loadEl.style.display = 'none', 650);
+                }
+            })();
+
+            let camTheta = 0.0, camPhi = 1.15, camDist = 16;
+            const autoDrift = 0.03;
+
+            function updateCameraFromAngles() {
+                camPhi = Math.min(Math.max(camPhi, 0.35), Math.PI - 0.35);
+                camera.position.set(
+                    camDist * Math.sin(camPhi) * Math.sin(camTheta),
+                    camDist * Math.cos(camPhi),
+                    camDist * Math.sin(camPhi) * Math.cos(camTheta)
+                );
+                camera.lookAt(0, 0, 0);
+            }
+            updateCameraFromAngles();
+
+            const clock = new THREE.Timer(); // Using THREE.Timer
+
+            function animate(timestamp) { // Accept the high-resolution timestamp from requestAnimationFrame
+                requestAnimationFrame(animate);
+
+                // 1. You MUST update the timer with the requestAnimationFrame timestamp
+                clock.update(timestamp);
+
+                // 2. Now getDelta() will work correctly and return the time elapsed since the last frame
+                const dt = Math.min(clock.getDelta(), 0.05);
+
+                camTheta += autoDrift * dt;
+                updateCameraFromAngles();
+
+                if (centerMesh) centerMesh.lookAt(camera.position);
+
+                const camDir = camera.position.clone().normalize();
+                const _worldPos = new THREE.Vector3();
+
+                orbiters.forEach(o => {
+                    o.pivot.rotateY(o.speed * dt);
+                    o.mesh.lookAt(camera.position);
+
+                    o.mesh.getWorldPosition(_worldPos);
+                    const occluded = _worldPos.lengthSq() > 0 && _worldPos.normalize().dot(camDir) < OCCLUSION_DOT;
+
+                    if (occluded && !o.wasOccluded) {
+                        const excluded = orbiters.filter(other => other !== o).map(other => other.index);
+                        excluded.push(o.index);
+                        const newIndex = pickRandomIndex(excluded);
+                        o.index = newIndex;
+                        o.mesh.material.map = textures[newIndex];
+                        o.mesh.material.needsUpdate = true;
+                        applyAspect(o.mesh, textures[newIndex], PLANE_SIZE);
+                    }
+                    o.wasOccluded = occluded;
+                });
+                renderer.render(scene, camera);
+            }
+            animate();
+        })();
+    </script>
+
+    <!-- Triangle + line-drawing background replaced with CodePen Animated Silk Background -->
+
+    <script type="module">
+        import * as THREE from 'three';
+
+        (function () {
+            'use strict';
+
+            /* ================================================================
+               SILK BACKGROUND
+               ================================================================ */
+
+            const canvas = document.createElement('canvas');
+            canvas.id = 'silkBackgroundCanvas';
+
+            document.body.insertBefore(
+                canvas,
+                document.body.firstChild
+            );
+
+            const SILK_COLOR = '#ffffff';
+
+
+            /* ================================================================
+               SPEED SETTINGS
+               ================================================================ */
+
+            /*
+               NORMAL_SPEED:
+               Speed when the user is NOT scrolling.
+        
+               SCROLL_SPEED:
+               Speed while the user IS scrolling.
+        
+               Try:
+                   0.10 / 0.80  = slow normal, faster scrolling
+                   0.15 / 1.00  = medium normal, faster scrolling
+                   0.20 / 1.50  = faster overall
+            */
+
+            const NORMAL_SPEED = 5.12;
+            const SCROLL_SPEED = 15.80;
+
+            /*
+               How quickly the animation changes from
+               normal speed to scroll speed.
+        
+               0.05 = very smooth/slow transition
+               0.08 = smooth
+               0.15 = faster transition
+            */
+            const SPEED_SMOOTHING = 0.08;
+
+            /*
+               How long after the last scroll event
+               before the animation returns to normal speed.
+            */
+            const SCROLL_STOP_DELAY = 200;
+
+
+            /* ================================================================
+               SCROLL CONTAINER
+               ================================================================ */
+
+            /*
+               If your page scrolls inside a wrapper, put
+               its selector here.
+        
+               Example:
+        
+               const SCROLL_CONTAINER_SELECTOR = '#wrapper';
+        
+               or:
+        
+               const SCROLL_CONTAINER_SELECTOR = '.page-wrapper';
+        
+               If your page uses normal browser scrolling,
+               you can leave this as '.wrapper'.
+            */
+
+            const SCROLL_CONTAINER_SELECTOR = '.wrapper';
+
+
+            /* ================================================================
+               VERTEX SHADER
+               ================================================================ */
+
+            const vertexShader = `
+
+        varying vec2 vUv;
+        varying vec3 vPosition;
+
+        void main() {
+
+            vPosition = position;
+            vUv = uv;
+
+            gl_Position =
+                projectionMatrix *
+                modelViewMatrix *
+                vec4(position, 1.0);
+        }
+
+    `;
+
+
+            /* ================================================================
+               FRAGMENT SHADER
+               ================================================================ */
+
+            const fragmentShader = `
+
+        varying vec2 vUv;
+        varying vec3 vPosition;
+
+        uniform float uTime;
+        uniform vec3  uColor;
+        uniform float uSpeed;
+        uniform float uScale;
+        uniform float uRotation;
+        uniform float uNoiseIntensity;
+
+
+        const float e =
+            2.71828182845904523536;
+
+
+        float noise(vec2 texCoord) {
+
+            float G = e;
+
+            vec2 r =
+                G *
+                sin(
+                    G *
+                    texCoord
+                );
+
+            return fract(
+                r.x *
+                r.y *
+                (1.0 + texCoord.x)
+            );
+        }
+
+
+        vec2 rotateUvs(
+            vec2 uv,
+            float angle
+        ) {
+
+            float c = cos(angle);
+            float s = sin(angle);
+
+            mat2 rot =
+                mat2(
+                    c, -s,
+                    s,  c
+                );
+
+            return rot * uv;
+        }
+
+
+        void main() {
+
+            float rnd =
+                noise(
+                    gl_FragCoord.xy
+                );
+
+
+            vec2 uv =
+                rotateUvs(
+                    vUv * uScale,
+                    uRotation
+                );
+
+
+            vec2 tex =
+                uv * uScale;
+
+
+            /*
+               uSpeed is now controlled by JavaScript.
+
+               IMPORTANT:
+               Do NOT use 30 here.
+
+               Previously:
+                   uSpeed = 30
+
+               That made the animation much faster than
+               the NORMAL_SPEED / SCROLL_SPEED values suggested.
+            */
+
+            float tOffset =
+                uSpeed *
+                uTime;
+
+
+            tex.y +=
+                0.03 *
+                sin(
+                    8.0 *
+                    tex.x -
+                    tOffset
+                );
+
+
+            float pattern =
+                0.6 +
+                0.4 *
+                sin(
+
+                    5.0 *
+                    (
+                        tex.x +
+                        tex.y +
+
+                        cos(
+                            3.0 * tex.x +
+                            5.0 * tex.y
+                        ) +
+
+                        0.02 *
+                        tOffset
+                    )
+
+                    +
+
+                    sin(
+                        20.0 *
+                        (
+                            tex.x +
+                            tex.y -
+                            0.1 *
+                            tOffset
+                        )
+                    )
+                );
+
+
+            vec4 col =
+                vec4(
+                    uColor,
+                    1.0
+                )
+
+                *
+
+                vec4(
+                    pattern
+                )
+
+                -
+
+                rnd /
+                15.0 *
+                uNoiseIntensity;
+
+
+            /*
+               Original opacity.
+            */
+
+            col.a = 0.052;
+
+
+            gl_FragColor =
+                col;
+        }
+
+    `;
+
+
+            /* ================================================================
+               SCENE
+               ================================================================ */
+
+            const scene =
+                new THREE.Scene();
+
+
+            /* ================================================================
+               CAMERA
+               ================================================================ */
+
+            const camera =
+                new THREE.OrthographicCamera(
+                    -1,
+                    1,
+                    1,
+                    -1,
+                    0.1,
+                    10
+                );
+
+            camera.position.z = 1;
+
+
+            /* ================================================================
+               RENDERER
+               ================================================================ */
+
+            const renderer =
+                new THREE.WebGLRenderer({
+
+                    canvas: canvas,
+
+                    antialias: true,
+
+                    alpha: true
+
+                });
+
+
+            /* ================================================================
+               UNIFORMS
+               ================================================================ */
+
+            const uniforms = {
+
+                /*
+                   IMPORTANT:
+        
+                   This was previously 30.
+        
+                   It is now 1 because JavaScript controls
+                   the actual animation speed.
+                */
+
+                uSpeed: {
+                    value: 1
+                },
+
+                uScale: {
+                    value: 1
+                },
+
+                uNoiseIntensity: {
+                    value: 1.5
+                },
+
+                uRotation: {
+                    value: 0
+                },
+
+                uColor: {
+                    value:
+                        new THREE.Color(
+                            SILK_COLOR
+                        )
+                },
+
+                uTime: {
+                    value: 0
+                }
+
+            };
+
+
+            /* ================================================================
+               GEOMETRY
+               ================================================================ */
+
+            const geometry =
+                new THREE.PlaneGeometry(
+                    1,
+                    1
+                );
+
+
+            /* ================================================================
+               MATERIAL
+               ================================================================ */
+
+            const material =
+                new THREE.ShaderMaterial({
+
+                    uniforms:
+
+                        uniforms,
+
+                    vertexShader:
+                        vertexShader,
+
+                    fragmentShader:
+                        fragmentShader,
+
+                    transparent:
+                        true
+
+                });
+
+
+            /* ================================================================
+               MESH
+               ================================================================ */
+
+            const mesh =
+                new THREE.Mesh(
+                    geometry,
+                    material
+                );
+
+            scene.add(mesh);
+
+
+            /* ================================================================
+               RESIZE
+               ================================================================ */
+
+            function resize() {
+
+                const aspect =
+                    window.innerWidth /
+                    window.innerHeight;
+
+
+                camera.left =
+                    -aspect;
+
+                camera.right =
+                    aspect;
+
+                camera.top =
+                    1;
+
+                camera.bottom =
+                    -1;
+
+
+                camera.updateProjectionMatrix();
+
+
+                renderer.setPixelRatio(
+                    Math.min(
+                        window.devicePixelRatio || 1,
+                        2
+                    )
+                );
+
+
+                renderer.setSize(
+                    window.innerWidth,
+                    window.innerHeight,
+                    false
+                );
+
+
+                mesh.scale.set(
+                    aspect * 2,
+                    2,
+                    1
+                );
+            }
+
+
+            window.addEventListener(
+                'resize',
+                resize,
+                {
+                    passive: true
+                }
+            );
+
+
+            resize();
+
+
+            /* ================================================================
+               SCROLL DETECTION
+               ================================================================ */
+
+            let isScrolling = false;
+
+            let scrollTimeout = null;
+
+
+            /*
+               Find the actual scrolling container, if the
+               selector matches anything. If it doesn't
+               (e.g. SCROLL_CONTAINER_SELECTOR is left at the
+               default '.wrapper' but the page has no such
+               element), we fall back to polling scroll
+               position every frame instead of relying on a
+               'scroll' event from a specific element. This
+               way it keeps working even if the real scrolling
+               element turns out to be something the theme
+               sets up that we don't know the selector for.
+            */
+
+            const scrollContainer =
+                document.querySelector(
+                    SCROLL_CONTAINER_SELECTOR
+                );
+
+
+            /*
+               Whatever we end up reading scroll position
+               from: the explicit container if it was found,
+               otherwise the document itself.
+            */
+
+            const scrollSource =
+                scrollContainer ||
+                document.scrollingElement ||
+                document.documentElement;
+
+            let lastScrollPos =
+                scrollSource.scrollTop;
+
+
+            /* ================================================================
+               HANDLE SCROLL
+               ================================================================ */
+
+            function handleScroll() {
+
+                /*
+                   Scrolling has started.
+                */
+
+                isScrolling = true;
+
+
+                /*
+                   Every scroll event resets the timer.
+                */
+
+                clearTimeout(
+                    scrollTimeout
+                );
+
+
+                /*
+                   When no scroll event happens for
+                   SCROLL_STOP_DELAY milliseconds,
+                   consider scrolling finished.
+                */
+
+                scrollTimeout =
+                    setTimeout(
+                        function () {
+
+                            isScrolling = false;
+
+                        },
+                        SCROLL_STOP_DELAY
+                    );
+            }
+
+
+            /* ================================================================
+               ATTACH SCROLL LISTENERS
+               ================================================================ */
+
+            /*
+               Attach to everything plausible: the configured
+               container (if it exists), window, and document.
+               Extra listeners are harmless (handleScroll just
+               resets a timer), and this means we don't have
+               to guess correctly about which element the page
+               actually scrolls.
+            */
+
+            if (scrollContainer) {
+                scrollContainer.addEventListener(
+                    'scroll',
+                    handleScroll,
+                    { passive: true }
+                );
+            }
+
+            window.addEventListener(
+                'scroll',
+                handleScroll,
+                { passive: true }
+            );
+
+            document.addEventListener(
+                'scroll',
+                handleScroll,
+                { passive: true, capture: true }
+            );
+
+
+            /* ================================================================
+               ANIMATION SPEED
+               ================================================================ */
+
+            /*
+               Start at normal speed.
+            */
+
+            let currentSpeed =
+                NORMAL_SPEED;
+
+
+            /* ================================================================
+               THREE TIMER
+               ================================================================ */
+
+            const clock =
+                new THREE.Timer();
+
+
+            /* ================================================================
+               ANIMATE
+               ================================================================ */
+
+            function animate() {
+
+                requestAnimationFrame(
+                    animate
+                );
+
+
+                /*
+                   Update THREE timer.
+                */
+
+                clock.update();
+
+
+                /*
+                   Time since previous frame.
+                */
+
+                const delta =
+                    clock.getDelta();
+
+
+                /* ------------------------------------------------------------
+                   Fallback scroll detection: compare scroll
+                   position frame-to-frame. This catches
+                   scrolling even in setups where no 'scroll'
+                   event ever reaches window/document/container
+                   (e.g. a theme with its own scroll handling).
+                   ------------------------------------------------------------ */
+
+                const currentScrollPos =
+                    scrollSource.scrollTop;
+
+                if (currentScrollPos !== lastScrollPos) {
+
+                    handleScroll();
+
+                    lastScrollPos = currentScrollPos;
+                }
+
+
+                /* ------------------------------------------------------------
+                   Determine desired speed
+                   ------------------------------------------------------------ */
+
+                const targetSpeed =
+                    isScrolling
+                        ? SCROLL_SPEED
+                        : NORMAL_SPEED;
+
+
+                /* ------------------------------------------------------------
+                   Smooth speed transition
+                   ------------------------------------------------------------ */
+
+                currentSpeed +=
+                    (
+                        targetSpeed -
+                        currentSpeed
+                    ) *
+                    SPEED_SMOOTHING;
+
+
+                /* ------------------------------------------------------------
+                   Advance animation
+                   ------------------------------------------------------------ */
+
+                uniforms.uTime.value +=
+                    delta *
+                    currentSpeed;
+
+
+                /* ------------------------------------------------------------
+                   Render
+                   ------------------------------------------------------------ */
+
+                renderer.render(
+                    scene,
+                    camera
+                );
+            }
+
+
+            /* ================================================================
+               START
+               ================================================================ */
+
+            animate();
+
+        })();
+    </script>
+
+    <script>
+        /* ================================================================
+           DESKTOP HERO — COMPLETELY INDEPENDENT SCRIPT
+           Desktop only. Mobile/tablet is untouched.
+
+           No more multi-second text/square/rectangle intro: on desktop
+           the video is swapped in immediately on load, with a small
+           spinner shown while it buffers.
+           ================================================================ */
+        (function () {
+            'use strict';
+
+            function initDesktopHero() {
+                if (window.innerWidth < 1024) return;
+
+                const panel = document.getElementById('heroPanel');
+                const header = document.getElementById('siteHeader');
+                if (!panel) return;
+
+                // Wipe the mobile/tablet hero markup (headline, desktop-hero
+                // text animation, old media) right away. .settled applies
+                // sizing/positioning immediately so nothing renders
+                // unstyled; .shrink (added after a hold) is what actually
+                // triggers the height change down to 2/3.
+                panel.innerHTML = '';
+                panel.classList.add('settled');
+                setTimeout(function () {
+                    panel.classList.add('shrink');
+                }, 1000);
+                if (header) header.classList.add('visible');
+
+                const loader = document.createElement('div');
+                loader.className = 'hero-video-loading';
+                loader.innerHTML = '<span class="hero-video-spinner"></span>';
+                panel.appendChild(loader);
+
+                const video = document.createElement('video');
+                video.id = 'heroSettledVideo';
+                video.src = 'assets/videos/Sequence 01_7.mp4';
+                video.autoplay = true;
+                video.muted = true;
+                video.playsInline = true;
+                video.setAttribute('playsinline', '');
+                video.setAttribute('preload', 'auto');
+                panel.appendChild(video);
+
+                function reveal() {
+                    video.classList.add('is-ready');
+                    loader.remove();
+                }
+
+                if (video.readyState >= 3) {
+                    reveal();
+                } else {
+                    video.addEventListener('canplay', reveal, { once: true });
+                    // Fail-safe: never get stuck behind the spinner.
+                    video.addEventListener('error', reveal, { once: true });
+                    setTimeout(reveal, 6000);
+                }
+
+                const playAttempt = video.play();
+                if (playAttempt && typeof playAttempt.catch === 'function') {
+                    playAttempt.catch(function () { /* ignored */ });
+                }
+                panel.style.height = '100vh';
+                panel.classList.add('settled');
+
+                setTimeout(function () {
+                    panel.style.transition = 'height 1.2s ease';
+                    void panel.offsetHeight;      // forces the browser to paint 100vh first
+                    panel.style.height = '66.6667vh';
+                }, 5500);
+            }
+
+            // This script is independent of the large Three.js module above.
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initDesktopHero, { once: true });
+            } else {
+                initDesktopHero();
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

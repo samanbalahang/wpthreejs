@@ -1,0 +1,1691 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'DoranFaNum';
+    src: url('../fonts/DoranFaNum-Thin-2.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DoranFaNum';
+    src: url('../fonts/DoranFaNum-Light-2.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DoranFaNum';
+    src: url('../fonts/DoranFaNum-Regular-2.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DoranFaNum';
+    src: url('../fonts/DoranFaNum-Medium-2.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DoranFaNum';
+    src: url('../fonts/DoranFaNum-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DoranFaNum';
+    src: url('../fonts/DoranFaNum-ExtraBold-2.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg: #141e97;
+    --blue-btn: #11223e;
+    --bg-deep: #000000;
+    --ink: #f5f6f8;
+    --gray: #ededed;
+    --red: #3a4b73;
+    --white: #ffffff;
+    --ease: cubic-bezier(0.65, 0, 0.35, 1);
+    --bg-gray: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* background: var(--bg); */
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'DoranFaNum';
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: var(--white) !important;
+}
+
+/* =========================================================
+     UTILITY CLASSES
+     Small, single-purpose classes meant to be combined on
+     elements (e.g. class="absolute flex col justify-between")
+     ========================================================= */
+/* -- position -- */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inset-0 {
+    inset: 0;
+}
+
+/* -- layout / flex --
+     .flex = flex, no wrap
+     .row  = flex, wraps (per request)
+     .col  = flex, column direction
+  */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* -- sizing -- */
+.w-screen {
+    width: 100vw;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+/* -- text / whitespace -- */
+.text-center {
+    text-align: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.line-tight {
+    line-height: 1;
+}
+
+/* -- misc -- */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.pointer-none {
+    pointer-events: none;
+}
+
+.will-change-transform {
+    will-change: transform;
+}
+
+.bg-base {
+    background: var(--white);
+}
+
+.z-4 {
+    z-index: 4;
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+/* =========================================================
+     COMPONENT CLASSES
+     Only the properties that are specific to each piece live
+     here; layout/position/etc. come from the utility classes
+     applied alongside these in the markup.
+     ========================================================= */
+/* ---- marquee rows wrapper ---- */
+.rows {
+    /* position/flex/col/justify-between come from:
+       absolute flex col justify-between */
+    inset: -15% -25%;
+    height: 100%;
+}
+
+.marquee-row .track span {
+    /* inline-block comes from: inline-block */
+    padding: 0 0.6em;
+}
+
+.en {
+    font-family: 'Poppins';
+    color: var(--gray);
+    font-weight: 900;
+    letter-spacing: 0.01em;
+}
+
+.fa {
+    font-family: 'DoranFaNum';
+    font-weight: 700;
+    color: var(--gray);
+}
+
+@keyframes moveLeftToRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveRightToLeft {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.ltr .track {
+    animation: moveLeftToRight linear infinite;
+}
+
+.rtl .track {
+    animation: moveRightToLeft linear infinite;
+}
+
+/* ---- headline ---- 
+    .headline {
+      /* absolute inset-0 flex col items-center justify-center text-center pointer-none z-5
+       come from utility classes 
+    }*/
+
+.headline .line {
+    color: var(--white);
+    font-family: "DoranFaNum";
+    font-weight: 900;
+    line-height: 1.15;
+    text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+}
+
+.headline .l1 {
+    font-size: clamp(2.4rem, 10vw, 5.2rem);
+    font-family: 'DoranFaNum';
+    margin-bottom: 2rem;
+}
+
+.headline .l2 {
+    font-size: clamp(2.4rem, 10vw, 5.2rem);
+    margin: 0.1em 0;
+    font-family: 'DoranFaNum';
+}
+
+.headline .l3 {
+    font-size: clamp(2.4rem, 10vw, 5.2rem);
+    font-family: 'DoranFaNum';
+    margin-top: -1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ============ FIXED HEADER ============ */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 88px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 4vw, 56px);
+    opacity: 0;
+    transform: translateY(-16px);
+    transition: opacity .9s var(--ease), transform .9s var(--ease);
+    pointer-events: none;
+}
+
+.site-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.site-header .logo {
+    height: 34px;
+    width: auto;
+}
+
+.hamburger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--ink);
+}
+
+/* ============ HERO -> MARQUEE HANDOFF ============
+           hero-panel and marquee-panel are independent sibling <section>s.
+           marquee-panel is a plain, static 100vh block that always sits right
+           after hero-panel in normal document flow — it never changes size.
+           hero-panel is the only thing that animates: it starts at 100vh
+           (covering the whole first viewport, like a black backdrop the cube
+           intro plays inside of) and once the intro settles, its own height
+           transitions down to 2/3 of the viewport. Because that's a real
+           layout height change (not position:fixed/sticky), the browser just
+           reveals marquee-panel underneath as hero-panel gets shorter. */
+.hero-panel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg-deep);
+    transition: height 1s var(--ease);
+
+}
+
+.hero-panel .stage {
+    position: relative;
+}
+
+.hero-panel .media {
+    position: absolute;
+    z-index: 2;
+}
+
+.hero-panel .media img {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-panel .headline {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-panel .line--1,
+.hero-panel .line--2 {
+    position: relative;
+    z-index: 1;
+}
+
+/* settled = the automatic (non-scroll) part of the intro has finished:
+           hero rests at 2/3 height, marquee-panel is revealed in the bottom 1/3 */
+.hero-panel.settled {
+    animation: settleHero 1s var(--ease) forwards;
+}
+
+@keyframes settleHero {
+    from {
+        height: 100vh;
+    }
+
+    to {
+        height: 66.6667vh;
+    }
+}
+
+.stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.media {
+    /* inset:0 + margin:auto keeps this centered automatically as width/height
+       change, so each phase below can animate just one axis at a time */
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: min(10rem, 420px);
+    height: 0;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headline {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity .6s var(--ease);
+}
+
+.line {
+    font-family: 'DoranFaNam', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.2rem, 5.2vw, 68px);
+    line-height: 1.35;
+    white-space: nowrap;
+    direction: rtl;
+    /* container itself is always "visible" now — each .word inside
+         it handles its own fade/slide-in, so words can appear one by one */
+    transition: transform 1.1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.line--2 {
+    font-weight: 700;
+}
+
+/* each word starts hidden + nudged down, .show reveals it */
+.line .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.6s ease;
+}
+
+.line .word.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PHASE 1 — text splits apart; at the same moment a small cubic (square)
+        box grows from the center, opening only on the Y axis (up + down) */
+.stage.split .line--1 {
+    transform: translateY(calc(-1 * var(--split-y, 46px)));
+}
+
+.stage.split .line--2 {
+    transform: translateY(var(--split-y, 46px));
+}
+
+.stage.cube .media {
+    opacity: 1;
+    width: min(10rem, 420px);
+    /* jumps instantly — stays fixed the whole time */
+    height: 0;
+    /* starting point — stays at 0 until 'grown' is added */
+    transition: opacity .3s ease;
+}
+
+.stage.cube.grown .media {
+    height: min(10rem, 420px);
+    transition: height 1.1s cubic-bezier(0.65, 0, 0.35, 1), opacity .3s ease;
+}
+
+.stage.fill .media {
+    border-radius: 0;
+}
+
+.stage.shrink .headline {
+    opacity: 0;
+}
+
+/* ---- marquee headline (scoped as mq-* so it never collides
+           with the hero's own .headline/.line rules above) ---- */
+.mq-headline {
+    position: relative;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    z-index: 5;
+    pointer-events: none;
+    padding-top: 2rem;
+}
+
+.mq-headline .mq-line {
+    opacity: 1;
+    transform: none;
+    color: var(--bg-deep);
+    font-family: "DoranFaNum";
+    font-weight: 900;
+    line-height: 1.15;
+    text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* each word starts hidden + nudged down, .show reveals it
+       (same pattern as the hero .line .word, scoped to mq-*) */
+.mq-headline .mq-line .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.6s ease;
+}
+
+.mq-headline .mq-line .word.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mq-headline .mq-l1 {
+    font-size: clamp(2.5rem, 7vw, 8rem);
+    line-height: 1.05;
+    font-family: 'DoranFaNum';
+    margin-bottom: 2rem;
+}
+
+/* .mq-headline .mq-l2 {
+      font-size: clamp(3rem, 7vw, 8rem);
+      line-height: 1.05;
+      margin: 0.1em 0;
+      font-family: 'DoranFaNum';
+    }
+
+    .mq-headline .mq-l3 {
+       font-size: clamp(3rem, 7vw, 8rem);
+       line-height: 1.05;
+      font-family: 'DoranFaNum';
+      margin-top: -1rem;
+    } */
+
+.righttoleft {
+    direction: rtl !important;
+}
+
+.mq-paragraph {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    position: relative;
+    z-index: 18;
+    direction: rtl;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn.blue-btn.text-white {
+    background-color: var(--blue-btn);
+    z-index: 7;
+    color: var(--white);
+    text-align: center;
+    border-radius: 1rem;
+    width: 5rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.6rem 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+/* ============ IMAGE 01 SECTION ============ */
+.character-video {
+    position: relative;
+    /* min-height: 100vh; */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.character-video img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(64px, 8vw, 110px);
+    height: clamp(64px, 8vw, 110px);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: transform .35s var(--ease);
+}
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+.play-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================================
+   DEPARTMENT CONTENT
+========================================================= */
+/* =========================================================
+   DEPARTMENT ITEMS
+========================================================= */
+
+.dept-item {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    text-align: right;
+
+    font-size: clamp(1.2rem, 6vw, 8rem);
+    font-weight: 400;
+    line-height: 1.3;
+
+    cursor: pointer;
+
+    transition:
+        font-size 0.35s ease,
+        font-weight 0.35s ease,
+        opacity 0.35s ease,
+        transform 0.35s ease;
+
+    opacity: 0.45;
+    transform-origin: right center;
+}
+
+
+
+.dept-item .num {
+    display: inline-block;
+
+    margin-left: 18px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    direction: ltr;
+    opacity: 0.7;
+}
+
+/* ACTIVE */
+.dept-item.active {
+    font-size: clamp(1.1rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dept-item.active .num {
+    font-size: clamp(1.1rem, 5vw, 8rem);
+    font-weight: 700;
+}
+
+
+/* Optional hover */
+.dept-item:hover {
+    opacity: 0.8;
+}
+
+.dept-item.active:hover {
+    opacity: 1;
+}
+
+.dept-list .dept-item.active:first-child,
+.dept-list .dept-item.active:first-child .num {
+    font-size: clamp(2rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(2),
+.dept-list .dept-item.active:nth-child(2) .num {
+    font-size: clamp(2.4rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(3),
+.dept-list .dept-item.active:nth-child(3) .num {
+    font-size: clamp(1.2rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(4),
+.dept-list .dept-item.active:nth-child(4) .num {
+    font-size: clamp(1.9rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(5),
+.dept-list .dept-item.active:nth-child(5) .num {
+    font-size: clamp(1.5rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(6),
+.dept-list .dept-item.active:nth-child(6) .num {
+    font-size: clamp(1.2rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(7),
+.dept-list .dept-item.active:nth-child(7) .num {
+    font-size: clamp(2.5rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-list .dept-item.active:nth-child(8),
+.dept-list .dept-item.active:nth-child(8) .num {
+    font-size: clamp(1.6rem, 5vw, 8rem);
+    font-weight: 700;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.dept-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 4rem;
+}
+
+.dept-content {
+    position: relative;
+    width: auto;
+    max-width: none;
+    transform: translateY(0);
+    z-index: 5;
+    height: 100%;
+    padding: 0 3rem;
+}
+
+
+
+/* =========================================================
+      LIST
+    ========================================================= */
+
+.dept-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.dept-list {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+    direction: rtl;
+    visibility: hidden;
+}
+
+
+/* =========================================================
+   IMAGE BELOW LIST
+========================================================= */
+
+.dept-heading {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.dept-section.visible {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 7;
+}
+
+#deptImg {
+    width: 100%;
+    aspect-ratio: 10/4;
+}
+
+.wholepage-heading {
+    font-weight: 900;
+    font-size: clamp(1.9rem, 11vw, 140px);
+    white-space: nowrap;
+    direction: ltr;
+    text-align: center;
+    color: var(--bg-deep);
+    line-height: 3rem;
+}
+.en-heading,
+.gray-text
+{
+    color: var(--bg-gray);
+}
+h2.en-heading {
+    font-weight: 900;
+    font-size: clamp(2.6rem, 12vw, 140px);
+    white-space: nowrap;
+    direction: ltr;
+    text-align: center;
+}
+
+h3.en-heading {
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 140px);
+    white-space: nowrap;
+    direction: ltr;
+    text-align: center;
+}
+
+.wholepage-heading-persian {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 8vw, 140px);
+    white-space: nowrap;
+    direction: rtl;
+    text-align: center;
+
+}
+
+.smaller-heading {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 100px);
+    white-space: nowrap;
+    direction: ltr;
+    text-align: center;
+    color: var(--bg-deep);
+}
+
+.image-dep-sec {
+    width: 100% !important;
+    /* max-height: 33.333333vh !important; */
+    margin-bottom: 0.5rem;
+}
+
+.image-dep-sec img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.image-dep-txt {
+    color: #fff;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(2px);
+    direction: rtl;
+    background: #ffffff21;
+    /* border: 1px solid #fff9; */
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.dep-image-papa .image-dep-sec:first-child .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(2) .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(3) .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(4) .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(5) .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(6) .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(7) .image-dep-txt h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.dep-image-papa .image-dep-sec:nth-child(8) .image-dep-txt h2 {
+    font-size: clamp(0.8rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+}
+
+.image-dep-txt p {
+    font-size: clamp(0.5rem, 1.2vw, 1.4rem);
+
+}
+
+/* swiper */
+.ourteam-swiper-parent .swiper-pagination,
+.mySwiper2 .swiper-pagination
+{
+    bottom: 0 !important;
+    top: auto !important;
+}
+
+.ourteam-swiper-parent .swiper-pagination-bullet:not(.swiper-pagination-bullet-active),
+.mySwiper2 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)
+{
+    width: 25px;
+    border-radius: 10px;
+    height: 2px;
+}
+
+/* .ourteam-swiper-parent .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):nth-child(2),
+.mySwiper2 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):nth-child(2)
+{
+    width: 50px;
+    border-radius: 10px;
+    height: 2px;
+}
+
+.ourteam-swiper-parent .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):nth-child(3),
+.mySwiper2 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):nth-child(3)
+{
+    width: 25px;
+    border-radius: 10px;
+    height: 2px;
+} */
+.swiper-pagination{
+    display: flex !important;
+    justify-content: center !important;
+}
+.ourteam-swiper-parent .swiper-pagination-bullet-active,
+.mySwiper2 .swiper-pagination-bullet-active
+{
+    background: var(--bg-deep);
+    opacity: 1;
+    width: 100px;
+    border-radius: 10px;
+    height: 2px;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.smaller-heading-persian {
+    font-size: clamp(1.2rem, 7.2vw, 68px);
+    font-weight: 900;
+}
+
+
+
+#q-gallery-section canvas {
+    width: 100% !important;
+    display: block;
+}
+
+.q-gallery-section {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.q-gallery-section * {
+    box-sizing: border-box;
+}
+
+.q-gallery-section canvas {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    pointer-events: none;
+}
+
+.q-gallery-section #loading {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 10;
+    transition: opacity .6s ease;
+}
+
+.q-gallery-section #loading .ring {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 175, 106, 0.25);
+    border-top-color: var(--qg-accent);
+    animation: qg-spin 1s linear infinite;
+}
+
+.q-gallery-section #loading p {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 13px;
+    color: var(--qg-ink-dim);
+    letter-spacing: 0.04em;
+}
+
+@keyframes qg-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width:375px) {
+    .stage.cube .media {
+        opacity: 1;
+        width: min(10rem, 420px);
+        /* jumps instantly — stays fixed the whole time */
+        height: 0;
+        /* starting point — stays at 0 until 'grown' is added */
+        transition: opacity .3s ease;
+    }
+
+    .stage.cube.grown .media {
+        height: min(10rem, 420px);
+        transition: height 1.1s cubic-bezier(0.65, 0, 0.35, 1), opacity .3s ease;
+    }
+
+    .dept-item.active {
+        font-size: clamp(1rem, 6vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .dept-item.active .num {
+        font-size: clamp(1rem, 6vw, 8rem);
+        font-weight: 700;
+    }
+
+    .image-dep-txt {
+        color: #fff;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(2px);
+        direction: rtl;
+        background: #ffffff21;
+        /* border: 1px solid #fff9; */
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+        padding: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
+
+    .dep-image-papa .image-dep-sec:first-child .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(2) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(3) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(4) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(5) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(6) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(7) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(8) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .image-dep-txt p {
+        font-size: clamp(0.7rem, 1.2vw, 1.4rem);
+
+    }
+
+    .dept-list .dept-item.active:first-child,
+    .dept-list .dept-item.active:first-child .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(2),
+    .dept-list .dept-item.active:nth-child(2) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(3),
+    .dept-list .dept-item.active:nth-child(3) .num {
+        font-size: clamp(1.4rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(4),
+    .dept-list .dept-item.active:nth-child(4) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(5),
+    .dept-list .dept-item.active:nth-child(5) .num {
+        font-size: clamp(2rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(6),
+    .dept-list .dept-item.active:nth-child(6) .num {
+        font-size: clamp(1.4rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(7),
+    .dept-list .dept-item.active:nth-child(7) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(8),
+    .dept-list .dept-item.active:nth-child(8) .num {
+        font-size: clamp(2.1rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+}
+
+@media (min-width:425px) {
+    .stage.cube .media {
+        opacity: 1;
+        width: min(13rem, 420px);
+        /* jumps instantly — stays fixed the whole time */
+        height: 0;
+        /* starting point — stays at 0 until 'grown' is added */
+        transition: opacity .3s ease;
+    }
+
+    .stage.cube.grown .media {
+        height: min(13rem, 420px);
+        transition: height 1.1s cubic-bezier(0.65, 0, 0.35, 1), opacity .3s ease;
+    }
+
+    .dept-item.active {
+        font-size: clamp(1rem, 6.7vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .dept-item.active .num {
+        font-size: clamp(1rem, 6.7vw, 8rem);
+        font-weight: 700;
+    }
+
+    .image-dep-txt {
+        color: #fff;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(2px);
+        direction: rtl;
+        background: #ffffff21;
+        /* border: 1px solid #fff9; */
+        border-radius: 20px;
+        width: 54%;
+        margin: auto;
+        padding: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
+
+    .dep-image-papa .image-dep-sec:first-child .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(2) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(3) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(4) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(5) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(6) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(7) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(8) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .image-dep-txt p {
+        font-size: clamp(0.7rem, 1.2vw, 1.4rem);
+
+    }
+
+    .dept-list .dept-item.active:first-child,
+    .dept-list .dept-item.active:first-child .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(2),
+    .dept-list .dept-item.active:nth-child(2) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(3),
+    .dept-list .dept-item.active:nth-child(3) .num {
+        font-size: clamp(1.4rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(4),
+    .dept-list .dept-item.active:nth-child(4) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(5),
+    .dept-list .dept-item.active:nth-child(5) .num {
+        font-size: clamp(2rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(6),
+    .dept-list .dept-item.active:nth-child(6) .num {
+        font-size: clamp(1.4rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(7),
+    .dept-list .dept-item.active:nth-child(7) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(8),
+    .dept-list .dept-item.active:nth-child(8) .num {
+        font-size: clamp(2.1rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+
+}
+
+@media (min-width:768px) {
+    .image-dep-sec {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .image-dep-sec img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stage.cube .media {
+        opacity: 1;
+        width: min(20rem, 420px);
+        /* jumps instantly — stays fixed the whole time */
+        height: 0;
+        /* starting point — stays at 0 until 'grown' is added */
+        transition: opacity .3s ease;
+    }
+
+    .stage.cube.grown .media {
+        height: min(20rem, 420px);
+        transition: height 1.1s cubic-bezier(0.65, 0, 0.35, 1), opacity .3s ease;
+    }
+
+    .dep-image-papa {
+        margin-top: 16rem;
+    }
+
+    .dept-item.active {
+        font-size: clamp(1rem, 8vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .dept-item.active .num {
+        font-size: clamp(1rem, 8vw, 8rem);
+    }
+
+    .image-dep-txt {
+        color: #fff;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(2px);
+        direction: rtl;
+        background: #ffffff21;
+        /* border: 1px solid #fff9; */
+        border-radius: 20px;
+        width: 54%;
+        margin: auto;
+        padding: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
+
+    .dep-image-papa .image-dep-sec:first-child .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(2) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(3) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(4) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(5) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(6) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(7) .image-dep-txt h2 {
+        font-size: clamp(2.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .dep-image-papa .image-dep-sec:nth-child(8) .image-dep-txt h2 {
+        font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+        font-weight: 900;
+    }
+
+    .image-dep-txt p {
+        font-size: clamp(0.7rem, 1.2vw, 1.4rem);
+
+    }
+
+    .dept-list .dept-item.active:first-child,
+    .dept-list .dept-item.active:first-child .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(2),
+    .dept-list .dept-item.active:nth-child(2) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(3),
+    .dept-list .dept-item.active:nth-child(3) .num {
+        font-size: clamp(1.4rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(4),
+    .dept-list .dept-item.active:nth-child(4) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(5),
+    .dept-list .dept-item.active:nth-child(5) .num {
+        font-size: clamp(2rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(6),
+    .dept-list .dept-item.active:nth-child(6) .num {
+        font-size: clamp(1.4rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(7),
+    .dept-list .dept-item.active:nth-child(7) .num {
+        font-size: clamp(2.5rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    .dept-list .dept-item.active:nth-child(8),
+    .dept-list .dept-item.active:nth-child(8) .num {
+        font-size: clamp(2.1rem, 5vw, 8rem);
+        font-weight: 700;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+}

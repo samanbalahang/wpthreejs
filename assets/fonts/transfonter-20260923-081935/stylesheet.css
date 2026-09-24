@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Doran FaNum';
+    src: url('DoranFaNum-Thin.woff2') format('woff2'),
+        url('DoranFaNum-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran FaNum';
+    src: url('DoranFaNum-Bold.woff2') format('woff2'),
+        url('DoranFaNum-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran FaNum';
+    src: url('DoranFaNum-ExtraBold.woff2') format('woff2'),
+        url('DoranFaNum-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran FaNum';
+    src: url('DoranFaNum-Light.woff2') format('woff2'),
+        url('DoranFaNum-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran FaNum';
+    src: url('DoranFaNum-Medium.woff2') format('woff2'),
+        url('DoranFaNum-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran FaNum';
+    src: url('DoranFaNum.woff2') format('woff2'),
+        url('DoranFaNum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
